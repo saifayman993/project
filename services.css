@@ -1,0 +1,94 @@
+/* Base Styles */
+:root {
+  --primary-color: #ff581f;
+  --background-overlay: rgba(0, 0, 0, 0.7);
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --card-hover-bg: rgba(255, 255, 255, 0.15);
+  --text-color: #ffffff;
+  --accent-color: #ff581f;
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background-image: linear-gradient(var(--background-overlay), var(--background-overlay)), url('services-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  line-height: 1.6;
+}
+
+/* Services Section */
+#services {
+  padding: 5rem 1rem;
+}
+
+.services-container {
+  max-width: var(--max-width);
+  margin: auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+}
+
+/* Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+/* Service Card */
+.service {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.service:hover {
+  background-color: var(--card-hover-bg);
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.service h3 {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.service p {
+  font-size: 1rem;
+  color: #f0f0f0;
+}
+
+/* Responsive Typography */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .service h3 {
+    font-size: 1.2rem;
+  }
+
+  .service p {
+    font-size: 0.95rem;
+  }
+}
